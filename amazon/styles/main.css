@@ -1,0 +1,328 @@
+body{
+background-color: #EBEDED;
+font-family: 'Roboto', sans-serif;
+}
+
+
+
+.box {
+  background-color: #EBEDED;
+  width: 60vw;
+      font-size: 20px;
+  border-left: 5px solid #232F3E;
+  border-right: 5px solid #232F3E;
+    border-top: 5px solid #232F3E;
+     border-bottom: 5px solid #232F3E;
+  padding: 20px;
+  margin-left: 20% ;
+margin-right: 20%;
+   border-radius: 50px;
+
+}
+
+.hh{ 
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-weight: bold;
+	margin: 100px;
+  margin-top: 100px;
+	font-size:140px;
+  color:#232F3E;
+}
+
+.hh2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin: 100px;
+  font-size: 40px;
+  color:#232F3E;
+}
+
+.hh3 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight:bold;
+  font-style:italic;
+  margin-left: 200px;
+margin-right: 200px;
+  font-size: 40px;
+  color:#232F3E;
+
+}
+
+.sub{ 
+	font-family: 'Roboto', sans-serif;
+	font-style: italic;
+	margin-left:200px;
+	margin-right:200px;
+	color: #707070;
+	column-count: 2;
+	column-gap: 40px;
+ }
+
+
+.flexcontainer{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  height:100px;
+}
+
+.vl {
+  border-left: 6px solid #232F3E;
+  height: 5600px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+}
+
+
+/* RIGHT ALIGN   
+
+Dropdown Button */
+.dropbtn {
+  background-color: #232F3E;
+  margin-top: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  padding: 46px 38px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  opacity: 0;
+ transition: opacity 500ms ease-out;
+  position: absolute;
+  background-color: #EBEDED;
+  min-width: 160px;
+}
+
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  width: 100%;  
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  display: block;
+  height: 100px;
+  width: 300px ;
+  transform:translate(55vw);
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown.beenHovered .dropdown-content {display: block;  opacity: 1}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #F7981D;}
+
+.time {
+    font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-weight: bold;
+ color:#232F3E;  
+ margin: 10px;
+  font-size: 25px;
+}
+
+.time_text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color:#707070;
+  margin: 10px;
+  font-size: 15px;
+}
+
+
+
+/* RIGHT ALIGN   
+
+Dropdown Button */
+.l-dropbtn {
+  background-color: #232F3E;
+  margin-top: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  padding: 46px 38px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.l-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.l-dropdown-content {
+  opacity: 0;
+ transition: opacity 500ms ease-out;
+  position: absolute;
+  background-color: #EBEDED;
+  min-width: 160px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;*/
+}
+
+/* Links inside the dropdown */
+.l-dropdown-content a {
+  color: black;
+  width: 100%;  
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  display: block;
+  height: 100px;
+  width: 300px ;
+  transform:translate(25vw);
+}
+
+
+/* Show the dropdown menu on hover */
+.l-dropdown:hover .l-dropdown-content {display: block;opacity: 1}
+
+.l-dropdown.l-beenHovered .l-dropdown-content {display: block;  opacity: 1}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.l-dropdown:hover .l-dropbtn {background-color: #F7981D;}
+
+
+.l-time {
+    font-family: 'Roboto', sans-serif;
+  text-align: end;
+  font-weight: bold;
+ color:#232F3E;  
+ margin: 10px;
+  font-size: 25px;
+}
+
+.l-time_text{
+  font-family: 'Roboto', sans-serif;
+  
+  font-weight: normal;
+  color:#707070;
+  margin: 10px;
+  font-size: 15px;
+}
+
+
+
+
+
+/*future button*/
+
+
+.f-dropbtn {
+  background-color: #232F3E;
+  margin-top: 80px;
+  margin-left:auto;
+  margin-right:auto;
+  color: white;
+  padding: 115px 60px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 50px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.f-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.f-dropdown-content {
+  opacity: 0;
+ transition: opacity 500ms ease-out;
+  position: absolute;
+  background-color: #EBEDED;
+  min-width: 160px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;*/
+}
+
+/* Links inside the dropdown */
+.f-dropdown-content a {
+  color: black;
+  width: 100%;  
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  display: block;
+  height: 100px;
+  width: 300px ;
+  transform:translate(25vw);
+}
+
+
+/* Show the dropdown menu on hover */
+.f-dropdown:hover .f-dropdown-content {display: block;opacity: 1}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.f-dropdown:hover .f-dropbtn {background-color: #F7981D;}
+
+
+.txt{
+  font-family: 'Roboto', sans-serif;
+  margin-left:200px;
+  margin-right:200px;
+  color: #707070;
+  column-count: 3;
+  column-gap: 40px;
+}
+
+.txt .highlight{
+    font-family: 'Roboto', sans-serif;
+  font-style: italic;
+   font-size: 20px;
+  color: #707070;
+ display: inline;
+}
+
+
+
+
+
+
+.hideAndRevealSpan {
+  color:#EBEDED;
+}
+.hideAndRevealSpan:hover {
+  color:#707070;
+}
+
+
+.space {
+height: 200px;
+
+}
