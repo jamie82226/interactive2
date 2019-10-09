@@ -30,17 +30,28 @@ body {
 }
 
 /* example element 1 */
-#element-1 {
-	  iteration-count:infinite;
 
-}
 #element-1:hover {
 	transform: rotate(360deg) scale(5);
+  
 	opacity: .3;
 }
 
 #element-1:active {
 	background: pink;
+	opacity: 1;
+}
+
+/* example element 1-1 */
+
+#element-1-1:hover {
+  	background: pink;
+	opacity: .2;
+
+}
+
+#element-1-1:active {
+	transform: rotate(10deg) scale(2);
 	opacity: 1;
 }
 
@@ -56,6 +67,58 @@ body {
 	content: 'this text changes on hover';
 	color: red;
 }
+
+/* example element 2-2 */
+
+#element-2-2::after {
+	content: 'this is added after the content inside the element';
+	color: white;
+}
+
+#smile {
+  position: relative;
+  z-index: 0;
+  background-color: yellow;
+  border: 6px solid #222;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  margin: 50px auto;
+  box-shadow: 2px 2px 1px #B8B8B8;
+  opacity:0;
+}
+.eye {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: #222;
+  margin-top: 35px;
+  margin-left: 33px;
+}
+.eye.right {
+margin-left: 92px;
+    margin-right: 71px;
+    margin-top: -9px;
+}
+.mouth {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  width: 115px;
+  margin: 0 auto;
+  border-bottom: 8px solid #222;
+  border-radius: 100%;
+}
+
+
+#element-2-2:hover #smile{
+	opacity:1;
+  }
+
 
 /* example element 3 is changed only via js */
 
@@ -74,4 +137,3 @@ body {
 #element-6{
 	transition: none; 
 }
- 
