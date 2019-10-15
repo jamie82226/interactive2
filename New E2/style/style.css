@@ -1,0 +1,53 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+
+/* container */
+
+.container {
+	position: relative;
+}
+
+/* items */
+.item {
+	height: 200px;
+	width: 200px;
+	background: black;
+	color: white;
+	margin: 10px auto;
+	padding: 10px;
+	box-sizing: border-box;
+	transition: all 500ms ease; 
+	cursor: pointer;
+}
+
+/* example element 1 */
+
+#element-1:hover {
+	transform: rotate(360deg) scale(5);
+  
+	opacity: .3;
+}
+
+#element-1:active {
+	background: pink;
+	opacity: 1;
+}
+
+/* example element 2 */
+
+#element-2:hover {
+  	background: pink;
+	opacity: .2;
+
+}
+
+#element-2:active {
+	transform: rotate(10deg) scale(2);
+	opacity: 1;
+}

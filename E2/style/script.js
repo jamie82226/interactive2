@@ -1,35 +1,10 @@
 let element3 = document.querySelector("#element-3");
-let element3a = document.querySelector("#element-3a");
 let element4 = document.querySelector("#element-4");
 let element5 = document.querySelector("#element-5");
 let element6 = document.querySelector("#element-6");
 
 element3.addEventListener("click", function() {
   element3.animate(
-    [
-      {
-        opacity: 0,
-        marginLeft: getComputedStyle(this).marginLeft,
-        fontSize: "100px",
-        borderWidth: getComputedStyle(this).borderWidth
-      },
-      {
-        opacity: 0.4,
-        marginLeft: "125px",
-        fontSize: "24px",
-        borderWidth: "10px"
-      }
-    ],
-    {
-      duration: 200,
-      iterations: 1,
-      fill: "forwards"
-    }
-  );
-});
-
-element3a.addEventListener("click", function() {
-  element3a.animate(
     [
       {
         opacity: 0,

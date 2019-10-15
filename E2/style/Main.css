@@ -7,6 +7,7 @@
 
 body {
 	font-family: helvetica, arial, sans-serif;
+	text-align:center;
 }
 
 /* container */
@@ -18,12 +19,14 @@ body {
 /* items */
 
 .item {
+	font-size:50px;
 	height: 200px;
 	width: 200px;
-	background: black;
-	color: white;
-	margin: 10px auto;
-	padding: 10px;
+	background: yellow;
+	color: black;
+	margin: 20px auto;
+	padding-top: 75px;
+
 	box-sizing: border-box;
 	transition: all 500ms ease; 
 	cursor: pointer;
@@ -33,41 +36,1460 @@ body {
 
 #element-1:hover {
 	transform: rotate(360deg) scale(5);
+  
 	opacity: .3;
 }
 
 #element-1:active {
-	background: pink;
+	background: black;
 	opacity: 1;
 }
 
 /* example element 2 */
 
-#element-2::after {
-	content: 'this is added after the content inside the element';
-	color: white;
+#element-2:hover {
+  	background: pink;
+	opacity: .2;
+
+}
+
+#element-2:active {
+	transform: rotate(10deg) scale(2);
+	opacity: 1;
 }
 
 
-#element-2:hover::after {
-	content: 'this text changes on hover';
-	color: red;
+/* example element 3 */
+#smile {
+  position: relative;
+  z-index: 0;
+  background-color: yellow;
+  border: 6px solid #222;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+     margin-top: -110px;
+    margin-left: 20px;
+  box-shadow: 2px 2px 1px #B8B8B8;
+  opacity:0;
+}
+.eye {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: #222;
+  margin-top: 35px;
+  margin-left: 33px;
+}
+.eye.right {
+margin-left: 92px;
+    margin-right: 71px;
+    margin-top: -9px;
+}
+.mouth {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  width: 115px;
+  margin: 0 auto;
+  border-bottom: 8px solid #222;
+  border-radius: 100%;
 }
 
-/* example element 3 is changed only via js */
+
+#element-3:hover #smile{
+	opacity:1;
+  }
 
 /* example element 4 */
-#element-4.gradient-background {
-	background: linear-gradient(blue, pink);
-	color: transparent;
+
+#element-4:hover {
+	animation: animationA 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationA {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+
+}
+ /* example element 5 */
+
+#element-5:hover {
+	animation: animationB 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes animationB {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
 }
 
-/* example element 5 */
-.circle {
-	border-radius: 125px;
+#element-6:hover {
+	animation: animationC 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationC {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 3);
+  }
 }
 
-/* example element 6 */
-#element-6{
-	transition: none; 
+#element-7:hover {
+	animation: animationD 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@keyframes animationD {
+   0% {
+    transform: rotateY(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: rotateY(180deg);
+    transform-origin: right;
+  }
+}
+
+
+#element-8:hover {
+	animation: animationE 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+@keyframes animationE {
+ 0% {
+    box-shadow: 0 0 pink, 0 0 pink, 0 0 pink, 0 0 pink, 0 0 pink, 0 0 pink, 0 0 pink, 0 0 pink;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px -1px pink, 2px -2px pink, 3px -3px pink, 4px -4px pink, 5px -5px pink, 6px -6px pink, 7px -7px pink, 8px -8px pink;
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+
+#element-9:hover {
+	animation: animationF 0.5s linear both;
+}
+@keyframes animationF {
+  0% {
+    transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+  }
+  100% {
+    transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+  }
+}
+
+#element-10:hover {
+	animation: animationG 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes animationG {
+  0% {
+    transform: translateY(0) translateZ(0) rotateX(0deg);
+    transform-origin: top center;
+  }
+  100% {
+    transform: translateY(150px) translateZ(130px) rotateX(90deg);
+    transform-origin: top center;
+  }
+}
+
+
+#element-11:hover {
+	animation: animationH 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationH {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100px) translateX(100px);
+  }
+}
+
+
+#element-12:hover {
+	animation: animationI 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationI {
+  0% {
+    transform: rotate(-360deg);
+    transform-origin: left;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: left;
+    opacity: 1;
+  }
+}
+
+#element-13:hover {
+	animation: animationJ 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationJ {
+ 0% {
+    transform: translateZ(-200px) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+#element-14:hover {
+	animation: animationK 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationK {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+#element-15:hover {
+	animation: animationL 0.45s ease-out both;
+}
+@keyframes animationL {
+  0% {
+    transform: translateZ(-800px) rotate3d(1, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  54% {
+    transform: translateZ(-160px) rotate3d(1, 1, 0, 87deg);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(0) rotate3d(1, 1, 0, 0);
+    animation-timing-function: ease-out;
+  }
+}
+
+#element-16:hover {
+	animation: animationM 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+@keyframes animationM {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+#element-17:hover {
+	animation: animationN 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationN {
+    0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+#element-18:hover {
+	animation: animationO 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationO {
+    0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+}
+
+#element-19:hover {
+	animation: animationP 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationP {
+    0% {
+    transform: rotate3d(-1, 1, 0, 360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate3d(-1, 1, 0, 0deg);
+    opacity: 0;
+  }
+}
+
+#element-20:hover {
+	animation: animationQ 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationQ {
+    0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+#element-21:hover {
+	animation: animationR 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationR {
+  0% {
+    transform: rotateY(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 0;
+  }
+}
+
+#element-22:hover {
+	animation: animationT 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationT {
+  0% {
+    transform: rotate(0);
+    transform-origin: 0 100%;
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    opacity: 0;
+  }
+}
+
+#element-23:hover {
+	animation: animationU 1s ease-out both;
+}
+@keyframes animationU {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#element-24:hover {
+	animation: animationV 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
+}
+@keyframes animationV {
+  0% {
+    transform: translate(0, 0) skew(0deg, 0deg);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(1000px, 1000px) skew(80deg, 10deg);
+    transform-origin: 0% 100%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+#element-25:hover {
+	animation: animationW 0.3s linear infinite both;
+}
+@keyframes animationW {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+#element-26:hover {
+	animation: animationX 8s linear infinite both;
+}
+@keyframes animationX {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  -0.02% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  1.02% {
+    opacity: 1;
+  }
+  8.98% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+  }
+  9.8% {
+    opacity: 0;
+  }
+  9.82% {
+    opacity: 1;
+  }
+  9.48% {
+    opacity: 1;
+  }
+  9.5% {
+    opacity: 1;
+  }
+  9.6% {
+    opacity: 1;
+  }
+  9.62% {
+    opacity: 1;
+  }
+  14.98% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  15.8% {
+    opacity: 0.5;
+  }
+  15.82% {
+    opacity: 1;
+  }
+  15.18% {
+    opacity: 1;
+  }
+  15.2% {
+    opacity: 0.7;
+  }
+  16% {
+    opacity: 0.7;
+  }
+  16.02% {
+    opacity: 1;
+  }
+  15.48% {
+    opacity: 1;
+  }
+  15.5% {
+    opacity: 0.5;
+  }
+  16.2% {
+    opacity: 0.5;
+  }
+  16.22% {
+    opacity: 1;
+  }
+  16.98% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  17.8% {
+    opacity: 1;
+  }
+  17.82% {
+    opacity: 1;
+  }
+  20.48% {
+    opacity: 1;
+  }
+  20.5% {
+    opacity: 0.9;
+  }
+  21.3% {
+    opacity: 0.9;
+  }
+  21.32% {
+    opacity: 1;
+  }
+  20.98% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  22.02% {
+    opacity: 1;
+  }
+  39.98% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 1;
+  }
+  41.02% {
+    opacity: 1;
+  }
+  40.48% {
+    opacity: 1;
+  }
+  40.5% {
+    opacity: 0.6;
+  }
+  41.4% {
+    opacity: 0.6;
+  }
+  41.42% {
+    opacity: 1;
+  }
+  41.98% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  42.8% {
+    opacity: 1;
+  }
+  42.82% {
+    opacity: 1;
+  }
+  59.98% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 1;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.18% {
+    opacity: 1;
+  }
+  60.2% {
+    opacity: 0.2;
+  }
+  61% {
+    opacity: 0.2;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.78% {
+    opacity: 1;
+  }
+  60.8% {
+    opacity: 0.4;
+  }
+  61.6% {
+    opacity: 0.4;
+  }
+  61.62% {
+    opacity: 1;
+  }
+  61.38% {
+    opacity: 1;
+  }
+  61.4% {
+    opacity: 0;
+  }
+  62.2% {
+    opacity: 0;
+  }
+  62.22% {
+    opacity: 1;
+  }
+  61.78% {
+    opacity: 1;
+  }
+  61.8% {
+    opacity: 1;
+  }
+  62.8% {
+    opacity: 1;
+  }
+  62.82% {
+    opacity: 1;
+  }
+  75.98% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 1;
+  }
+  77.02% {
+    opacity: 1;
+  }
+  77.98% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.7;
+  }
+  78.8% {
+    opacity: 0.7;
+  }
+  78.82% {
+    opacity: 1;
+  }
+  78.98% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  80.02% {
+    opacity: 1;
+  }
+  99.98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+  101% {
+    opacity: 1;
+  }
+  101.02% {
+    opacity: 1;
+  }
+}
+
+#element-27:hover {
+	animation: animationY 0.8s both;
+}
+@keyframes animationY {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+#element-28:hover {
+	animation: animationZ 0.9s both;
+}
+@keyframes animationZ {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#element-29:hover {
+	animation: animationAA 0.8s both;
+}
+@keyframes animationAA {
+  0% {
+    transform: skew(0deg 0deg);
+  }
+  30% {
+    transform: skew(-25deg -25deg);
+  }
+  40% {
+    transform: skew(15deg, 15deg);
+  }
+  50% {
+    transform: skew(-15deg, -15deg);
+  }
+  65% {
+    transform: skew(5deg, 5deg);
+  }
+  75% {
+    transform: skew(-5deg, -5deg);
+  }
+  100% {
+    transform: skew(0deg 0deg);
+  }
+}
+
+#element-30:hover {
+	animation: animationAB 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes animationAB {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 100% 0;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+#element-31:hover {
+	animation: animationAC 0.8s ease-in-out infinite both;
+}
+@keyframes animationAC {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+#element-32:hover {
+	animation: animationAD 2s linear infinite alternate both;
+}
+@keyframes animationAD {
+   0% {
+    background: #19dcea;
+  }
+  100% {
+    background: #b22cff;
+  }
+}
+
+
+#element-33:hover {
+	animation: animationAE 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationAE {
+  0% {
+    transform: rotate(0);
+    transform-origin: 100% 100%;
+  }
+  100% {
+    transform: rotate(90deg);
+    transform-origin: 100% 100%;
+  }
+}
+
+#element-34:hover {
+	animation: animationAF 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationAF {
+   0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(85deg);
+  }
+}
+
+#element-35:hover {
+	animation: animationAG 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes animationAG {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+#element-36:hover {
+	animation: animationAH 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationAH {
+  0% {
+    transform: rotate(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(-90deg);
+    transform-origin: bottom;
+  }
+}
+
+#element-37:hover {
+	animation: animationAI 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;}
+@keyframes animationAI {
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
+  100% {
+    transform: translateZ(-400px) translateX(-200px);
+  }
+}
+
+#element-38:hover {
+	animation: animationAJ 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes animationAJ {
+0% {
+    transform: scaleX(0.1);
+    transform-origin: 0% 0%;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0% 0%;
+  }
+}
+
+#element-39:hover {
+	animation: animationAK 0.6s ease-in both;
+}
+@keyframes animationAK {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(800px) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+#element-40:hover {
+	animation: animationAL 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+}
+@keyframes animationAL {
+  0% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+}
+
+#element-41:hover {
+	animation: animationAM 0.7s ease-in both;
+}
+@keyframes animationAM {
+  0% {
+    transform: rotateX(0);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+}
+
+#element-42:hover {
+	animation: animationAN 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationAN {
+ 0% {
+    transform: translateZ(0) translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(600px) translateY(-300px) translateX(400px);
+    opacity: 0;
+  }
+}
+
+#element-43:hover {
+	animation: animationAO 0.9s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+@keyframes animationAO {
+  0% {
+    transform: scaleX(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(2);
+    filter: blur(2px);
+    opacity: 0;
+  }
+}
+
+#element-44:hover {
+	animation: animationAP 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes animationAP {
+  0% {
+    transform: translateZ(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+}
+
+
+#element-45:hover {
+	animation: animationAQ 2s linear both;
+}
+@keyframes animationAQ {
+0% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  13.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  14% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  14.9% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  15% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  22.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  23% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  24.9% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  25% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  34.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+  }
+  35% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  39.9% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  40% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  42.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+  }
+  43% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  44.9% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  45% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  54.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  55% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  69.4% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  69.5% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  69.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+  }
+  70% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  79.4% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  79.9% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+  }
+  80% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  89.8% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  89.9% {
+    opacity: 1;
+    box-shadow: none;
+  }
+  90% {
+    opacity: 0;
+    box-shadow: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#element-46:hover {
+	animation: animationAR 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes animationAR {
+ 0% {
+    transform: translateX(50px) translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+#element-47:hover {
+	animation: animationAS 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes animationAS {
+ 0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+#element-48:hover {
+	animation: animationAT 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes animationAT {
+0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 100% 50%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+#element-49:hover {
+	animation: animationAU 8s linear infinite both;
+}
+@keyframes animationAU {
+0%,
+  100% {
+    opacity: 1;
+  }
+  -0.02% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  1.02% {
+    opacity: 1;
+  }
+  8.98% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+  }
+  9.8% {
+    opacity: 0;
+  }
+  9.82% {
+    opacity: 1;
+  }
+  9.48% {
+    opacity: 1;
+  }
+  9.5% {
+    opacity: 1;
+  }
+  9.6% {
+    opacity: 1;
+  }
+  9.62% {
+    opacity: 1;
+  }
+  14.98% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.5;
+  }
+  15.8% {
+    opacity: 0.5;
+  }
+  15.82% {
+    opacity: 1;
+  }
+  15.18% {
+    opacity: 1;
+  }
+  15.2% {
+    opacity: 0.7;
+  }
+  16% {
+    opacity: 0.7;
+  }
+  16.02% {
+    opacity: 1;
+  }
+  15.48% {
+    opacity: 1;
+  }
+  15.5% {
+    opacity: 0.5;
+  }
+  16.2% {
+    opacity: 0.5;
+  }
+  16.22% {
+    opacity: 1;
+  }
+  16.98% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  17.8% {
+    opacity: 1;
+  }
+  17.82% {
+    opacity: 1;
+  }
+  20.48% {
+    opacity: 1;
+  }
+  20.5% {
+    opacity: 0.9;
+  }
+  21.3% {
+    opacity: 0.9;
+  }
+  21.32% {
+    opacity: 1;
+  }
+  20.98% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 1;
+  }
+  22.02% {
+    opacity: 1;
+  }
+  39.98% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 1;
+  }
+  41.02% {
+    opacity: 1;
+  }
+  40.48% {
+    opacity: 1;
+  }
+  40.5% {
+    opacity: 0.6;
+  }
+  41.4% {
+    opacity: 0.6;
+  }
+  41.42% {
+    opacity: 1;
+  }
+  41.98% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  42.8% {
+    opacity: 1;
+  }
+  42.82% {
+    opacity: 1;
+  }
+  59.98% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 1;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.18% {
+    opacity: 1;
+  }
+  60.2% {
+    opacity: 0.2;
+  }
+  61% {
+    opacity: 0.2;
+  }
+  61.02% {
+    opacity: 1;
+  }
+  60.78% {
+    opacity: 1;
+  }
+  60.8% {
+    opacity: 0.4;
+  }
+  61.6% {
+    opacity: 0.4;
+  }
+  61.62% {
+    opacity: 1;
+  }
+  61.38% {
+    opacity: 1;
+  }
+  61.4% {
+    opacity: 0;
+  }
+  62.2% {
+    opacity: 0;
+  }
+  62.22% {
+    opacity: 1;
+  }
+  61.78% {
+    opacity: 1;
+  }
+  61.8% {
+    opacity: 1;
+  }
+  62.8% {
+    opacity: 1;
+  }
+  62.82% {
+    opacity: 1;
+  }
+  75.98% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 1;
+  }
+  77.02% {
+    opacity: 1;
+  }
+  77.98% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.7;
+  }
+  78.8% {
+    opacity: 0.7;
+  }
+  78.82% {
+    opacity: 1;
+  }
+  78.98% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  80.02% {
+    opacity: 1;
+  }
+  99.98% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+  101% {
+    opacity: 1;
+  }
+  101.02% {
+    opacity: 1;
+  }
+}
+
+#element-50:hover {
+	animation: animationAV 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes animationAV {
+0% {
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+
