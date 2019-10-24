@@ -1,0 +1,43 @@
+/* body{
+  background-color:light pink;
+} */
+
+#dave {
+  background: black;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#larry {
+  background: black;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#chad {
+  width: 200px;
+  height: 200px;
+  background: black;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle {
+  animation: colorchange 2s linear infinite alternate both;
+}
+
+@keyframes colorchange {
+  0% {
+    background: white 10%;
+  }
+  100% {
+    background: black 10%;
+  }
+}
