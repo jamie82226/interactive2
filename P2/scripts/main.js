@@ -1,7 +1,8 @@
-let howOften = 20;
+let howOften = 80;
 let redSquare = document.querySelector("#dave");
 let blueSquare = document.querySelector("#larry");
 let greenSquare = document.querySelector("#chad");
+
 
 console.log(redSquare);
 
@@ -9,9 +10,14 @@ let timer;
 
 let scale = 0;
 
-let hue = 0;
-let saturation = 0;
-let luminosity = 0;
+let hue = 1;
+let saturation = 1;
+let luminosity = 1;
+
+
+
+
+
 
 //red square control
 redSquare.addEventListener("mouseenter", function() {
@@ -27,7 +33,7 @@ redSquare.addEventListener("mouseleave", function() {
 
 function checkHowLongRed() {
   // scale += 0.02;
-  saturation += 0.01;
+  saturation -= 0.01;
 
   // redSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 100 +"%)";
   // blueSquare.style.background = "hsl(" + hue * 200 + ", "+saturationBlue * 100 +"%, "+luminosity * 50 +"%)";
@@ -61,7 +67,7 @@ blueSquare.addEventListener("mouseleave", function() {
 
 function checkHowLongBlue() {
   // scale += 0.02;
-  luminosity += 0.01;
+  luminosity -= 0.01;
 
   // redSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 50 +"%)";
   // blueSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 100 +"%)";
@@ -96,7 +102,7 @@ greenSquare.addEventListener("mouseleave", function() {
 
 function checkHowLongGreen() {
   // scale += 0.02;
-  hue += 0.01;
+  hue -= 0.01;
 
   // redSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 50 +"%)";
   redSquare.style.background =
