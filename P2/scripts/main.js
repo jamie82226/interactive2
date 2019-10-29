@@ -23,12 +23,13 @@ let luminosity = 1;
 redSquare.addEventListener("mouseenter", function() {
   redSquare.style.transform = "scale(1)";
   timer = setTimeout(checkHowLongRed, howOften);
+  // blueSquare.nextElementSibling.classList.toggle("circle");
+
 });
 
 redSquare.addEventListener("mouseleave", function() {
   clearTimeout(timer);
   redSquare.style.transform = "scale(1)";
-  redSquare.nextElementSibling.classList.remove("circle");
 });
 
 function checkHowLongRed() {
@@ -38,13 +39,10 @@ function checkHowLongRed() {
   // redSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 100 +"%)";
   // blueSquare.style.background = "hsl(" + hue * 200 + ", "+saturationBlue * 100 +"%, "+luminosity * 50 +"%)";
   blueSquare.style.background =
-    "rgb(" +
-    hue * 100 +
-    ", " +
-    saturation * 100 +
-    ", " +
-    luminosity * 100 +
-    ")";
+    "rgb(" + hue * 100 + ", " + saturation * 100 + ", " + luminosity * 100 + ")";
+
+  // blueSquare.nextElementSibling.classList.toggle("circle");
+
 
   // greenSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 50 +"%)";
 

@@ -30,14 +30,6 @@
 }
 
 .circle {
-  animation: colorchange 2s linear infinite alternate both;
-}
-
-@keyframes colorchange {
-  0% {
-    background: white 10%;
-  }
-  100% {
-    background: black 10%;
-  }
+  border-style: solid;
+  border-color: white;
 }
