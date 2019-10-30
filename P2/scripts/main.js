@@ -1,8 +1,10 @@
-let howOften = 80;
+let howOften =40;
 let redSquare = document.querySelector("#dave");
 let blueSquare = document.querySelector("#larry");
 let greenSquare = document.querySelector("#chad");
 
+
+var Audio = document.querySelector("#Audio");
 
 console.log(redSquare);
 
@@ -21,6 +23,7 @@ let luminosity = 1;
 
 //red square control
 redSquare.addEventListener("mouseenter", function() {
+    // Audio.play();
   redSquare.style.transform = "scale(1)";
   timer = setTimeout(checkHowLongRed, howOften);
   // blueSquare.nextElementSibling.classList.toggle("circle");
@@ -35,6 +38,7 @@ redSquare.addEventListener("mouseleave", function() {
 function checkHowLongRed() {
   // scale += 0.02;
   saturation -= 0.01;
+    Audio.play();
 
   // redSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 100 +"%)";
   // blueSquare.style.background = "hsl(" + hue * 200 + ", "+saturationBlue * 100 +"%, "+luminosity * 50 +"%)";
@@ -66,6 +70,7 @@ blueSquare.addEventListener("mouseleave", function() {
 function checkHowLongBlue() {
   // scale += 0.02;
   luminosity -= 0.01;
+    Audio.play();
 
   // redSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 50 +"%)";
   // blueSquare.style.background = "hsl(" + hue * 200 + ", "+saturation * 100 +"%, "+luminosity * 100 +"%)";
@@ -99,6 +104,8 @@ greenSquare.addEventListener("mouseleave", function() {
 });
 
 function checkHowLongGreen() {
+      Audio.play();
+
   // scale += 0.02;
   hue -= 0.01;
 
