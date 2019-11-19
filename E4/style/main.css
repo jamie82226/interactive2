@@ -1,0 +1,73 @@
+body {
+  font-size:3vw;
+  font-family:Menlo, monospace;
+  background: black;
+}
+.copy {
+  max-width: 500px;
+  margin:0 auto;
+  color: white;
+      text-align: center;
+
+}
+
+.pretty{
+  width: 54vmin;
+  height: 80vmin;
+  top:calc(50vh - 40vmin);
+  left:calc(50vw - 27vmin);
+  background-size: 100%;
+    display:none;
+    position:fixed;
+    text-align: center;
+     z-index:-1;
+}
+
+.later{
+  width: 54vmin;
+  height: 80vmin;
+  top:calc(50vh - 40vmin);
+  left:calc(50vw - 27vmin);
+  background-size: 100%;
+    display:none;
+    position:fixed;
+    text-align: center;
+     z-index:-1;
+}
+
+
+
+
+.big, .small {
+  display:none;
+margin-top: 70vh;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    margin-top:25vh;
+  }
+
+   .small {
+    display:block;
+  }
+
+  .later {
+    display:block;
+  }
+
+  
+}
+
+@media only screen and  (min-width: 801px) {
+    .big {
+    display:block;
+  }
+  .pretty {
+    display:block;
+  }
+  .later{
+    display:none;
+  }
+
+}

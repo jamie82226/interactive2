@@ -1,0 +1,184 @@
+body {
+  background: black;  
+  font-family: helvetica;
+  color:white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  min-height: 100vh;
+  margin-top: -90px;
+
+}
+
+
+#h{
+    font-family: monaco;
+  font-size:30px;
+  color: gray;
+    opacity: 0.6;
+
+}
+
+#time {
+  color:gray;
+  font-family: monaco;
+  font-size:100px;
+    opacity: 0.6;
+
+
+}
+
+
+#mom1 {
+  top:170px;
+  left: 300px;
+  height:20vh;
+  width:2000px;
+  font-size: 100px;
+
+  position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom2 {
+  top: 70px;
+  left: 150px;
+  height:40vh;
+  width:2000px;
+  font-size: 80px;
+
+  position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+
+
+#mom3 {
+    top: 400px;
+    left: 200px;
+    height: 40vh;
+    width: 2000px;
+    font-size: 60px;
+     position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+
+#mom4 {
+  top:170px;
+  left: 1200px;
+  height:40vh;
+  width:2000px;
+  font-size: 80px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+
+#mom5 {
+  top:700px;
+  left: 500px;
+  height:40vh;
+  width:2000px;
+  font-size: 40px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom6 {
+  top:300px;
+  left: 500px;
+  height:40vh;
+  width:2000px;
+  font-size: 40px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom7 {
+  top:800px;
+  left: 900px;
+  height:40vh;
+  width:2000px;
+  font-size: 40px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom8 {
+  top:700px;
+  left: 300px;
+  height:40vh;
+  width:2000px;
+  font-size: 80px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom9 {
+  top:100px;
+  left: 1000px;
+  height:40vh;
+  width:2000px;
+  font-size: 40px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom10 {
+  top:500px;
+  left: 1000px;
+  height:40vh;
+  width:2000px;
+  font-size: 60px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+#mom11 {
+  top:200px;
+  left: 300px;
+  height:40vh;
+  width:2000px;
+  font-size: 40px;
+   position: absolute;
+  font-family: helvetica;
+  color: white;
+  opacity: 1;
+}
+
+.aFiveMinute {
+  background: white;
+}
+
+
+.hide, #hidden{
+ display: none;
+}
+
+.appear {
+opacity:1;
+}
+
+
