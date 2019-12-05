@@ -64,7 +64,7 @@ font-family: 'Tajawal', sans-serif;
 
 #rule{
   position:absolute;
-  left:85vw;
+  left:83vw;
   top:90vh;
   color:#A7A9AC;
   font-size:1.7vmin;
@@ -157,9 +157,10 @@ display:block;
 
 
 .bio-text{
-width: 50vmin; 
+width: 60vmin; 
 color:#333333;
-font-size:20px;
+font-size:15px;
+line-height: 200%;
 margin-left:50px;
 bottom:-10px; 
 background-size: 100%;
@@ -168,9 +169,12 @@ background-size: 100%;
 
 
 .bio-page {
-margin-top:5%;  
+  hight:100vh;
+bottom:25vh;
+left:25vw;
 display: flex;
 justify-content: center;
+position:absolute;
 
 }
 
@@ -187,6 +191,9 @@ font-weight: lighter;
 bottom:-8px;
 background-size: 100%;
 width: 70vmin;
+display: flex;
+    flex-direction: column-reverse;
+    position: relative;
 }
 
 #info{
@@ -284,6 +291,7 @@ flex-direction: row;
 
 
 
+
 .gridlines {
   --grid-size:10vmin;
   --grid-color:grey;
@@ -302,11 +310,14 @@ flex-direction: row;
     margin-right:auto;
 
   display:flex;
+    flex-direction: column-reverse;
+    position: relative;
 }
 
 #image1{
    margin-top:150px;
-   margin-bottom: 100px
+
+   margin-bottom:100px; 
    
 }
 
@@ -318,20 +329,36 @@ flex-direction: row;
 
 
 #phone_info{
-  margin-top:-3vh;
+  color:#333333;
+  margin-top:5vh;
   margin-left:auto;
     margin-right:auto;
   margin-bottom:90px;
 }
 
 .phone_show_info{
+color:#333333;
   width: 70vmin;
   height:auto;
  
   margin-left:auto;
     margin-right:auto;
+    display:none;
 
 }
+
+#phone_info_bio{
+  font-family: 'Tajawal', sans-serif;
+  font-size: 15px;
+  font-weight:lighter;
+  color:#333333;
+  line-height: 200%;
+  margin-top:5vh;
+  margin-left:auto;
+    margin-right:auto;
+  margin-bottom:90px;
+}
+
 
 
 
@@ -355,6 +382,9 @@ flex-direction: row;
     display:block;
   }
 
+.bio-page{
+  display:none;
+}
 
 
 
