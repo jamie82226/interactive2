@@ -2,7 +2,6 @@ body, html {
 /*  overflow-y:hidden;
 */  background:  white;
 font-family: 'Tajawal', sans-serif;
-  min-height:100vh;
   cursor: default;
 }
 
@@ -249,7 +248,7 @@ flex-direction: row;
 }
 
 #left {
-    background-color: white;
+    background-color: transparent;
   border:none;
     font-size: 4vmin;
  margin-right:40px;
@@ -261,7 +260,7 @@ flex-direction: row;
 }
 
 #right {
-    background-color: white;
+    background-color: transparent;
   border:none;
     font-size: 4vmin;
 }
